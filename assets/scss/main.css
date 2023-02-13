@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+}
+.wrapper ul,
+.wrapper li {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper .main-content .header {
+  padding: 15px 0;
+  background-color: #fff;
+  display: flex;
+}
+.wrapper .main-content .header-options {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 90%;
+}
+.wrapper .main-content .header-options li {
+  display: inline-block;
+}
+.wrapper .main-content .header .profile-info {
+  flex-basis: 10%;
+}
+
+.wrapper .main-content {
+  background-color: #eff1f7;
+  flex-basis: 85%;
+}
+
+.wrapper .sidebar {
+  flex-basis: 15%;
+}
