@@ -1,7 +1,59 @@
 .wrapper {
     .main-content {
         background-color: #eff1f7;
-        // height: 500px;
         flex-basis: 85%;
+
+        &-inner {
+            padding: 20px 15px;
+
+            .activity-state {
+                display: flex;
+                justify-content: space-between;
+
+                &-items {
+                    background-color: #fff;
+                    padding: 35px;
+
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+
+                    i {
+                        font-size: 80px;
+                        vertical-align: super;
+                        margin-right: 20px;
+
+                        &.fa-user {
+                            &-doctor {
+                                color: #16bbe5;
+                            }
+
+                            &-nurse {
+                                color: #ea5d5d;
+                            }
+
+                        }
+
+                        &.fa-face-mask {
+                            color: #fcad73;
+                        }
+
+                        &.fa-kit-medical {
+                            color: #2daab8;
+                        }
+                    }
+
+                    div {
+                        display: inline-block;
+                    }
+
+                    h4 {
+                        font-size: 60px;
+                    }
+
+                }
+
+            }
+        }
     }
 }

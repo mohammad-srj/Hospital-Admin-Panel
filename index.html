@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/bs/scss/bootstrap.css">
     <link rel="stylesheet" href="/assets/scss/main.css">
     <title>Document</title>
 </head>
@@ -14,25 +15,47 @@
         <div class="sidebar"></div>
         <div class="main-content">
             <header class="header">
+                <div class="search"><a href="#"><i class="fa-light fa-magnifying-glass"></i></a><input type="text"
+                        class="search-input" placeholder="Search here..."></div>
                 <div class="header-options">
-                    <div class="search">
-                        <input type="text" class="search-input" placeholder="Search here...">
-                    </div>
-
                     <ul class="list-unstyled">
-                        <li class="notifications">
-                            <a href="#"></a>
+                        <li class="notifications"><a href="#"><i class="fa-light fa-bell"></i></a></li>
+                        <li class="messages"><a href="#"><i class="fa-light fa-message-lines"></i></a></li>
+                    </ul>
+                    <div class="profile-info"><img src="/assets/images/prof-img.jpg" alt=""></div>
+                </div>
+            </header>
+            <section class="main-content-inner">
+                <div class="activity-state-holder">
+                    <ul class="list-unstyled activity-state">
+                        <li class="activity-state-items"><i class="fas fa-user-doctor"></i>
+                            <div>
+                                <h4>520</h4>
+                                <p>Doctor</p>
+                            </div>
                         </li>
-                        <li class="messages">
-                            <a href="#"></a>
+                        <li class="activity-state-items"><i class="fas fa-user-nurse"></i>
+                            <div>
+                                <h4>6969</h4>
+                                <p>Nurses</p>
+                            </div>
+                        </li>
+                        <li class="activity-state-items"><i class="fas fa-face-mask"></i>
+                            <div>
+                                <h4>7509</h4>
+                                <p>Patients</p>
+                            </div>
+                        </li>
+                        <li class="activity-state-items">
+                            <i class="fa-solid fa-kit-medical"></i>
+                            <div>
+                                <h4>2110</h4>
+                                <p>Kits</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <div class="profile-info">
-                    <img src="#" alt="">
-                </div>
-            </header>
-            <section class="main-content-inner"></section>
+            </section>
             <footer class="footer"></footer>
         </div>
     </div>

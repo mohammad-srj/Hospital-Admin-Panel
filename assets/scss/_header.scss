@@ -1,23 +1,59 @@
 .wrapper {
     .main-content {
         .header {
-            padding: 15px 0;
-            background-color: #fff;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #fff;
 
             &-options {
                 display: flex;
                 justify-content: space-between;
-                flex-basis: 90%;
+                align-items: center;
+
+                ul {
+                    margin: 0 45px;
+                }
 
                 li {
                     display: inline-block;
+
+                    a {
+                        font-size: 28px;
+                        color: #929bb5;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+
+                .profile-info {
+                    position: relative;
+
+                    img {
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 50%;
+                        margin: auto;
+                    }
                 }
             }
 
-            .profile-info {
-                flex-basis: 10%;
+            .search {
+                &-input {
+                    padding: 15px 45px 15px 5px;
+                    background-color: #f5f7fd;
+                    font-size: 14px;
+                    border-radius: 0 50px 50px 0;
+                }
 
+                a {
+                    padding: 15px 5px 15px 30px;
+                    background-color: #f5f7fd;
+                    border-radius: 50px 0 0 50px;
+                }
             }
         }
     }
