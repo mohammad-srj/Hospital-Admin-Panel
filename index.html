@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/bs/scss/bootstrap.css">
     <link rel="stylesheet" href="/assets/scss/main.css">
+    <link rel="stylesheet" href="/assets/js/ApexChart/apexcharts.css">
+    <link rel="stylesheet" href="/assets/slick/slick.css">
+    <link rel="stylesheet" href="/assets/slick/slick-theme.css">
     <title>Document</title>
 </head>
 
@@ -46,8 +49,7 @@
                                 <p>Patients</p>
                             </div>
                         </li>
-                        <li class="activity-state-items">
-                            <i class="fa-solid fa-kit-medical"></i>
+                        <li class="activity-state-items"><i class="fa-solid fa-kit-medical"></i>
                             <div>
                                 <h4>2110</h4>
                                 <p>Kits</p>
@@ -55,10 +57,212 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="survey">
+                    <div class="head-title">
+                        <h4>Hospital Survey</h4>
+                    </div>
+                    <ul class="survey-state list-unstyled">
+                        <li class="survey-state-items">
+                            <h4>$17</h4>
+                            <p>Today's income</p>
+                        </li>
+                        <li class="survey-state-items">
+                            <h4>$56</h4>
+                            <p>This Week's income</p>
+                        </li>
+                        <li class="survey-state-items">
+                            <h4>$308</h4>
+                            <p>This Month's income</p>
+                        </li>
+                        <li class="survey-state-items">
+                            <h4>$8714</h4>
+                            <p>This Year's income</p>
+                        </li>
+                    </ul>
+                    <div id="surveyChart" class="survey-chart"></div>
+                </div>
+
+                <div class="report">
+                    <div class="report-patients bg-white-radius">
+                        <div class="head-title">
+                            <h4>Patients</h4>
+                            <div class="search"><a href="#"><i class="fa-light fa-magnifying-glass"></i></a><input
+                                    type="text" class="search-input" placeholder="Search here..."></div>
+                        </div>
+                        <div class="table-holder">
+                            <table id="patientsTable" class="table">
+                                <thead class="thead">
+                                    <tr>
+                                        <th scope="col">Patient's Name</th>
+                                        <th scope="col">Department</th>
+                                        <th scope="col">Appointment Date</th>
+                                        <th scope="col">Serial Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry the Bird</td>
+                                        <td>Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry the Bird</td>
+                                        <td>Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry the Bird</td>
+                                        <td>Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry the Bird</td>
+                                        <td>Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="report-total">
+                        <div class="bg-white-radius report-total-recover">
+                            <div class="head-title">
+                                <h4>Total Recover Report</h4>
+                            </div>
+                            <div id="recoverChart"></div>
+                        </div>
+                        <div class="bg-white-radius report-total-death">
+                            <div class="head-title">
+                                <h4>Total Death Report</h4>
+                            </div>
+                            <div id="deathChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" bg-white-radius staff">
+                    <div class="head-title">
+                        <h4>Hospital Staff</h4>
+                    </div>
+                    <ul class="staff-slider list-unstyled">
+                        <li class="staff-cards">
+                            <div>
+                                <img class="staff-cards-img" src="/assets/images/1.jpg">
+                            </div>
+
+                            <h4 class="staff-cards-name">Dr.No one</h4>
+
+                            <p>Doctor</p>
+                        </li>
+                        <li class="staff-cards">
+                            <div>
+                                <img class="staff-cards-img" src="/assets/images/2.jpg">
+                            </div>
+
+                            <h4 class="staff-cards-name">Dr.No one</h4>
+
+                            <p>Doctor</p>
+                        </li>
+                        <li class="staff-cards">
+                            <div>
+                                <img class="staff-cards-img" src="/assets/images/3.jpg">
+                            </div>
+
+                            <h4 class="staff-cards-name">Dr.No one</h4>
+
+                            <p>Doctor</p>
+                        </li>
+                        <li class="staff-cards">
+                            <div>
+                                <img class="staff-cards-img" src="/assets/images/1.jpg">
+                            </div>
+
+                            <h4 class="staff-cards-name">Dr.No one</h4>
+
+                            <p>Doctor</p>
+                        </li>
+                        <li class="staff-cards">
+                            <div>
+                                <img class="staff-cards-img" src="/assets/images/2.jpg">
+                            </div>
+
+                            <h4 class="staff-cards-name">Dr.No one</h4>
+
+                            <p>Doctor</p>
+                        </li>
+                        <li class="staff-cards">
+                            <div>
+                                <img class="staff-cards-img" src="/assets/images/3.jpg">
+                            </div>
+
+                            <h4 class="staff-cards-name">Dr.No one</h4>
+
+                            <p>Doctor</p>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <footer class="footer"></footer>
         </div>
     </div>
+    <script src="/assets/js/ApexChart/apexcharts.min.js"></script>
+    <script src="/assets/jquery/jquery-3.6.3.js"></script>
+    <script src="/assets/slick/slick.min.js"></script>
+    <script src="/assets/bs/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

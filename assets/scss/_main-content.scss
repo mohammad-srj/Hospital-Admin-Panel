@@ -4,22 +4,25 @@
         flex-basis: 85%;
 
         &-inner {
-            padding: 20px 15px;
+            padding: 30px 35px;
 
             .activity-state {
                 display: flex;
                 justify-content: space-between;
+                margin: 5px 0 25px;
+                font-family: "rajd";
 
                 &-items {
                     background-color: #fff;
-                    padding: 35px;
+                    padding: 35px 60px;
+                    border-radius: 10px;
 
                     &:not(:last-child) {
                         margin-right: 20px;
                     }
 
                     i {
-                        font-size: 80px;
+                        font-size: 60px;
                         vertical-align: super;
                         margin-right: 20px;
 
@@ -48,11 +51,129 @@
                     }
 
                     h4 {
-                        font-size: 60px;
+                        font-size: 40px;
+                        font-weight: bold;
+                        color: #2e4765;
+                    }
+
+                    p {
+                        color: #b2b5c0;
                     }
 
                 }
 
+            }
+
+            .survey {
+                background-color: #fff;
+                margin: 5px 0 25px;
+                border-radius: 10px;
+                padding: 20px 30px;
+
+                &-title {
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid #aaa;
+                    font-family: "rajd";
+                    font-weight: 900;
+                    color: #2e4765;
+                }
+
+                &-state {
+                    padding-top: 15px;
+                    display: flex;
+                    justify-content: space-around;
+                    text-align: center;
+
+                    &-items {
+                        font-family: popp, sans-serif;
+
+                        h4 {
+                            color: #2e4765;
+                            font-weight: 900;
+                            font-size: 30px;
+                        }
+
+                        p {
+                            color: #b2b5c0;
+                            font-family: 14px;
+                        }
+                    }
+
+                }
+
+                &-chart {
+                    margin-top: 20px;
+                }
+            }
+
+            .report {
+                display: flex;
+                justify-content: space-between;
+                margin: 5px 0 25px;
+
+                &-head {
+                    margin-bottom: 15px;
+
+                }
+
+                &-patients {
+                    flex-basis: 60%;
+                    margin-right: 30px;
+
+                    .table-holder {
+                        text-align: center;
+                    }
+                }
+
+                &-total {
+                    flex-basis: 40%;
+
+                    &-recover {
+                        margin-bottom: 30px;
+                    }
+
+                    .head-title {
+                        border: none;
+                    }
+                }
+            }
+
+            .staff {
+                margin: 5px 0 25px;
+                margin-right: 25px;
+
+                &-slider {
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+
+                &-cards {
+                    flex-basis: 25%;
+                    box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.25);
+                    text-align: center;
+                    margin-right: 15px;
+                    padding: 55px 0 55px;
+
+                    &-img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        margin-bottom: 20px;
+                    }
+
+                    &-name {
+                        font-weight: 500;
+                        font-family: "rajd";
+                        color: #2e4765;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-family: 'popp';
+                        font-size: 13px;
+                        color: #aaa;
+                    }
+                }
             }
         }
     }
